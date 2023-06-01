@@ -27,7 +27,7 @@ public class Questions {
             System.out.println("not a leap");
         }
     }
-    public void prime(int n){
+    public boolean prime(int n){
         boolean flag =true;
         for(int i=2;i<n;i++){
             if(n%i==0){
@@ -35,11 +35,12 @@ public class Questions {
          break;
             }
         }
-        if(flag==true){
-            System.out.println("prime");
-        } else{
-            System.out.println("not prime");
-        }
+//        if(flag==true){
+//            System.out.println("prime");
+//        } else{
+//            System.out.println("not prime");
+//        }
+        return flag;
     }
     public void primeBtw2(int a,int b){
         for(int n=a;n<=b;n++){
@@ -120,10 +121,55 @@ return flag;
         }
     }
 
+    //fabo
+    void fabonacci(int n){
+        int og=n;
+        int n1=0;
+        int n2=1;
+        System.out.print(n1+" "+n2+" ");
+        int nextT=0;
+        while (n!=2) {
+             nextT = n1 + n2;
+            n1 = n2;
+            n2 = nextT;
+            n--;
+            System.out.print(nextT+" ");
+        }
+        System.out.println();
+        System.out.println(og+ "th fibo term is "+ nextT);
+    }
+void fact(int n){
+        int fact=1;
+        for(int i=n;i>=1;i--){
+            fact*=i;
+        }
+    System.out.println(fact);
+}
+
+void power(int n,int p){
+        int pow=1;
+        while (p!=0){
+            pow*=n;
+            p--;
+        }
+    System.out.println(pow);
+}
+
+void primeFactors(int n){
+        int og=n;
+        for(int i=2;i<og;i++){
+            if(prime(i)){
+                while (n!=0 && n%i==0){
+                    System.out.print(i+" ");
+                    n=n/2;
+                }
+            }
+        }
+}
 
 
     public static void main(String[] args) {
         Questions q1= new Questions();
-        q1.armstronNumbers(100,1000);
+        q1.primeFactors(48);
     }
 }

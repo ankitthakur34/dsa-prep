@@ -16,9 +16,16 @@ public class Question {
 
         return a+sumBtw2(a+1,b);
     }
+
+    public int fibo(int n){
+        if(n==0 || n==1){
+            return n;
+        }
+        return fibo(n-1)+fibo(n-2);
+    }
     public static void main(String[] args) {
         Question q = new Question();
-        System.out.println(q.sumBtw2(5,7));
+        System.out.println(q.fibo(5));
 
     }
 }
