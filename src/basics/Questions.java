@@ -167,9 +167,22 @@ void primeFactors(int n){
         }
 }
 
+void hcf(int a,int b){
+        int ao=a;
+        int bo=b;
+        int rem=Integer.MAX_VALUE;
+        while (rem!=0){
+            rem=a%b;
+            a=b;
+            b=rem;
+        }
+    System.out.println("hcf is"+a);
+    System.out.println("lcm is "+(ao*bo)/a);
+
+}
 
     public static void main(String[] args) {
         Questions q1= new Questions();
-        q1.primeFactors(48);
+        q1.hcf(36,24);
     }
 }
