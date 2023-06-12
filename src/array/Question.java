@@ -3,7 +3,7 @@ package array;
 import java.util.*;
 
 public class Question {
-    void printArray(int[] arr){
+ public    void printArray(int[] arr){
         System.out.println(Arrays.toString(arr));
     }
      void largestNSmallest(int[] arr){
