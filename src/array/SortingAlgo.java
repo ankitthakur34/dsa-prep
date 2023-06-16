@@ -93,7 +93,9 @@ public class SortingAlgo {
         printArray(arr);
     }
 
-
+//void mergeSort(int[] arr){
+//
+//}
 
 
     private int getMax(int[] arr, int last) {

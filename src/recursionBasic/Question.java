@@ -1,6 +1,17 @@
 package recursionBasic;
 
 public class Question {
+
+    int print(int n){
+
+        if(n==0){
+            return 0;
+        }
+     //   System.out.println(n);
+
+        return n+ print(n-1);
+    }
+
     public  int sumN(int n){
         if (n == 1) {
             return 1;
@@ -25,7 +36,7 @@ public class Question {
     }
     public static void main(String[] args) {
         Question q = new Question();
-        System.out.println(q.fibo(5));
+        System.out.println(q.print(5));
 
     }
 }
