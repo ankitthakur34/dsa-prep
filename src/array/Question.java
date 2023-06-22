@@ -195,14 +195,14 @@ public class Question {
             list.add(s.charAt(i));
         }
 
-        Collections.sort(list,(n1,n2)->{
-            int f1=map.get(n1);
-            int f2=map.get(n2);
+        list.sort((n1, n2) -> {
+            int f1 = map.get(n1);
+            int f2 = map.get(n2);
 
-            if(f1!=f2){
-                return f2-f1;
-            } else{
-                return n1-n2;
+            if (f1 != f2) {
+                return f2 - f1;
+            } else {
+                return n1 - n2;
             }
         });
         for(int i=0;i<list.size();i++){
